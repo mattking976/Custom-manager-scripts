@@ -1,0 +1,39 @@
+Helo Pilot Kit
+
+
+Squad Leader
+[[["UK3CB_BAF_L85A3_UGL","","UK3CB_BAF_LLM_IR_Black","rhsusf_acc_su230a_mrds",["UK3CB_BAF_556_30Rnd",30],["UK3CB_BAF_1Rnd_HEDP_Grenade_Shell",1],""],
+[],
+["UK3CB_BAF_L131A1","","","",["UK3CB_BAF_9_17Rnd",17],[],""],
+["UK3CB_BAF_U_CombatUniform_MTP_RM",[["ACE_fieldDressing",10],["ACE_elasticBandage",10],["ACE_packingBandage",10],["ACE_quikclot",10]]],
+["mpx_virtus_admin_p",[["ACE_EarPlugs",1],["ItemcTabHCam",1],["rhsusf_mag_17Rnd_9x19_FMJ",2,17],["rhsgref_30rnd_556x45_m21",10,30],["UK3CB_BAF_1Rnd_HEDP_Grenade_Shell",4,1]]],
+["TFAR_anprc155",[["ACE_EntrenchingTool",1],["ACE_splint",4],["ACE_tourniquet",4],["ACE_plasmaIV_500",2],["ACE_plasmaIV_250",4],["UK3CB_BAF_SmokeShellRed",2,1],["UK3CB_BAF_SmokeShell",2,1],["UK3CB_BAF_SmokeShellGreen",2,1],["rhs_mag_m67",2,1],["UK3CB_BAF_1Rnd_Smoke_Grenade_shell",3,1],["UK3CB_BAF_1Rnd_SmokeGreen_Grenade_shell",3,1]]],
+"UK3CB_BAF_H_Mk7_Camo_A","",
+["ACE_VectorDay","","","",[],[],""],
+["ItemMap","ItemcTab","TFAR_anprc152","ItemCompass","TFAR_microdagr","rhsusf_ANPVS_14"]],[]]
+
+Marksman
+
+
+249 Machine gunner
+[[["rhs_weap_m240G","","","rhsusf_acc_ELCAN",["rhsusf_100Rnd_762x51",100],[],""],
+[],
+["UK3CB_BAF_L131A1","","","",["UK3CB_BAF_9_17Rnd",17],[],""],
+["UK3CB_BAF_U_CombatUniform_MTP_RM",[["ACE_fieldDressing",10],["ACE_elasticBandage",10],["ACE_packingBandage",10],["ACE_quikclot",10]]],
+["mpx_virtus_p",[["rhsusf_100Rnd_762x51",4,100],["rhsusf_mag_17Rnd_9x19_FMJ",1,17]]],
+["mpx_daysack8",[["ACE_EarPlugs",1],["ACE_EntrenchingTool",1],["ItemcTabHCam",1],["ACE_splint",4],["ACE_tourniquet",4]]],
+"UK3CB_BAF_H_Mk7_Camo_A","",
+["ACE_VectorDay","","","",[],[],""],
+["ItemMap","ItemMicroDAGR","TFAR_anprc152","ItemCompass","TFAR_microdagr","rhsusf_ANPVS_14"]],
+[]]
+
+240 Machine Gunner
+
+
+heavy anti tank
+
+
+medic
+
+
+EOD/LAT

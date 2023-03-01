@@ -1,0 +1,12 @@
+removeAllActions VM;
+VM addAction ["<t color='#ff1111'>Vehicle Manager</t>", hint ""]; 
+VM addAction ["==================", hint ""];
+VM addAction ["Spawn Coyote with GMG", "Scripts\VehicleSpawn\wheeled.sqf", [["COYGMG"]]];
+VM addAction ["Spawn Coyote with HMG", "Scripts\VehicleSpawn\wheeled.sqf", [["COYHMG"]]];
+VM addAction ["Spawn Jackal with GMG", "Scripts\VehicleSpawn\wheeled.sqf", [["JAKGMG"]]];
+VM addAction ["Spawn Jackal with HMG", "Scripts\VehicleSpawn\wheeled.sqf", [["JAKHMG"]]];
+VM addAction ["Spawn WMIK Milan", "Scripts\VehicleSpawn\wheeled.sqf", [["WMIKMILAN"]]];
+VM addAction ["Spawn WMIK HMG", "Scripts\VehicleSpawn\wheeled.sqf", [["WMIKHMG"]]];
+VM addAction ["Spawn Panther", "Scripts\VehicleSpawn\wheeled.sqf", [["PANTHER"]]];
+VM addAction ["==================", hint ""];
+VM addAction ["<t color='#54ff9f'>Back</t>", "Scripts\VehicleSpawn\Menu\back.sqf"];
