@@ -14,8 +14,8 @@ removeGoggles _plyer;
 // ------------------------------------------------
 
 // uniform vest and helmet
-_uniform = "UK3CB_BAF_U_CombatUniform_MTP_RM";
-_helmet = "UK3CB_BAF_H_Mk7_Camo_A";
+_uniform = "CUP_U_B_BAF_MTP_UBACSLONGKNEE_Gloves";
+_helmet = "UK3CB_BAF_H_Mk7_Scrim_ESS_B";
 _vestRifle = "mpx_virtus_p"; // vest is the same for all except SL and medic
 
 // medic vest
@@ -52,7 +52,7 @@ _pistol = "UK3CB_BAF_L131A1";
 
 // magazines
 _pistolMag = "UK3CB_BAF_9_17Rnd";
-_rifleMag = "rhsgref_30rnd_556x45_m21";
+_rifleMag = "UK3CB_BAF_556_30Rnd";
 _rifleMarksmanMag = "UK3CB_BAF_762_L42A1_20Rnd";
 _MG249Mag = "rhsusf_200rnd_556x45_mixed_box";
 _MG240Mag = "rhsusf_100Rnd_762x51";
@@ -65,6 +65,8 @@ _backpackMedic = "B_Bergen_mcamo_F";
 // binoculars
 _binoculars = "ACE_VectorDay";
 
+// gas mask
+_gasMask = "G_CBRN_M04_Hood";
 // ------------------------------------------------
 
 addBasics = {
@@ -152,6 +154,7 @@ addBackpackItems = {
 	_plyer addItemToBackpack "ItemcTabHCam";
 	_plyer addItemToBackpack "ACE_EntrenchingTool";
 	_plyer addItemToBackpack "rhsusf_ANPVS_14";
+	_plyer addItemToBackpack _gasMask;
 	for "_i" from 1 to 4 do { _plyer addItemToBackpack "ACE_splint"};
 	for "_i" from 1 to 4 do { _plyer addItemToBackpack "ACE_tourniquet"};
 	for "_i" from 1 to 2 do { _plyer addItemToBackpack "ACE_plasmaIV"};
@@ -186,6 +189,7 @@ addMedicBackpack = {
 	_plyer addItemToBackpack "ACE_surgicalKit";
 	_plyer addItemToBackpack "kat_retractor";
 	_plyer addItemToBackpack "kat_X_AED";
+	_plyer addItemToBackpack _gasMask;
 };
 
 switch (_LO) do
