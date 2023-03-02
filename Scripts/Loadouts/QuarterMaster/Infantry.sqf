@@ -1,7 +1,7 @@
 _plyer = _this select 1;
 _LO = ((_this select 3) select 0) select 0;
 
-//Clearing Inventory
+// Clearing Inventory
 removeAllWeapons _plyer;  
 removeAllItems _plyer;  
 removeUniform _plyer;  
@@ -10,70 +10,70 @@ removeBackpack _plyer;
 removeHeadgear _plyer;  
 removeGoggles _plyer; 
 
-//class names
-//------------------------------------------------
+// class names
+// ------------------------------------------------
 
-//uniform vest and helmet
+// uniform vest and helmet
 _uniform = "UK3CB_BAF_U_CombatUniform_MTP_RM";
 _helmet = "UK3CB_BAF_H_Mk7_Camo_A";
-_vestRifle = "mpx_virtus_p"; //vest is the same for all except SL and medic
+_vestRifle = "mpx_virtus_p"; // vest is the same for all except SL and medic
 
-//medic vest
+// medic vest
 _vestMedic = "mpx_virtus_Medic_p";
 
-//rifles and their setups
-//common attachments
+// rifles and their setups
+// common attachments
 _rifleOptic = "rksl_optic_lds";
 _rifleLLM = "UK3CB_BAF_LLM_IR_Black";
 
-//SL
+// SL
 _rifleSL = "UK3CB_BAF_L85A3_UGL";
 _vestSL = "mpx_virtus_admin_p";
 
-//249 Machine Gunner
+// 249 Machine Gunner
 _MG249 = "UK3CB_BAF_L110A2RIS";
 _MG249Optic = "rhsusf_acc_ELCAN";
 
-//MG240
+// MG240
 _MG240 = "rhs_weap_m240G";
 _MG240Optic = "rhsusf_acc_ELCAN";
 
-//marksman
+// marksman
 _rifleMarksman = "UK3CB_BAF_L129A1";
 _rifleMarksmanSupressor = "UK3CB_BAF_Silencer_L115A3";
 _rifleMarksmanScope = "UK3CB_BAF_TA648_308";
 
-//rifleman
+// rifleman
 _rifle = "UK3CB_BAF_L85A3";
 _rifleGripPod = "UK3CB_underbarrel_acc_grippod";
 
-//sidearm
+// sidearm
 _pistol = "UK3CB_BAF_L131A1";
 
-//magazines
+// magazines
 _pistolMag = "UK3CB_BAF_9_17Rnd";
 _rifleMag = "rhsgref_30rnd_556x45_m21";
 _rifleMarksmanMag = "UK3CB_BAF_762_L42A1_20Rnd";
 _MG249Mag = "rhsusf_200rnd_556x45_mixed_box";
 _MG240Mag = "rhsusf_100Rnd_762x51";
 
-//backpacks including LR Radios
+// backpacks including LR Radios
 _backpack = "mpx_daysack8";
 _longRangeRadioBP = "TFAR_anprc155";
 _backpackMedic = "B_Bergen_mcamo_F";
 
-//binoculars
+// binoculars
 _binoculars = "ACE_VectorDay";
 
-//------------------------------------------------
+// ------------------------------------------------
 
 addBasics = {
 	params ["_weapon", "_vest", "_bag"];
 
-	//weapons
+	// weapons
 	_plyer addWeapon _weapon;
 
-	//add attachments
+	// add attachments
 	switch(_weapon) do
 	{
 		case _rifleSL:
@@ -116,22 +116,22 @@ addBasics = {
 		};
 	};
 
-	//pistol
+	// pistol
 	_plyer addWeapon _pistol;
 	_plyer addWeaponItem [_pistol, _pistolMag];
 			
-	//uniform
+	// uniform
 	_plyer forceAddUniform _uniform;
 
-	//backpack
+	// backpack
 	_plyer addBackpack _bag;
 
-	//Other Equipment
+	// Other Equipment
 	_plyer addHeadgear _helmet;
 	_plyer addWeapon _binoculars;
 };
 
-//function for adding bandages to players uniform
+// function for adding bandages to players uniform
 addBandage = {
 	for "_i" from 1 to 10 do { _plyer addItemToUniform "ACE_fieldDressing"};
 	for "_i" from 1 to 10 do { _plyer addItemToUniform "ACE_elasticBandage"};
@@ -139,14 +139,14 @@ addBandage = {
 	for "_i" from 1 to 10 do { _plyer addItemToUniform "ACE_quikclot"};
 };
 
-//fucntion for adding common ammo and misc items to the vest
+// fucntion for adding common ammo and misc items to the vest
 addVestItems = {
 	for "_i" from 1 to 3 do {_plyer addItemToVest _pistolMag;};
 	for "_i" from 1 to 10 do {_plyer addItemToVest _rifleMag;};
 	_plyer addItemToVest "kat_Painkiller";
 };
 
-//function for addding backpack items
+// function for addding backpack items
 addBackpackItems = {
 	_plyer addItemToBackpack "ACE_EarPlugs";
 	_plyer addItemToBackpack "ItemcTabHCam";
@@ -160,7 +160,7 @@ addBackpackItems = {
 
 // full medic backpack content.
 addMedicBackpack = {
-	//add medical and misc content
+	// add medical and misc content
 	for "_i" from 1 to 5 do { _plyer addItemToBackpack "ACE_splint"};
 	for "_i" from 1 to 5 do { _plyer addItemToBackpack "ACE_tourniquet"};
 	for "_i" from 1 to 40 do { _plyer addItemToBackpack "ACE_packingBandage"};
@@ -190,21 +190,21 @@ addMedicBackpack = {
 
 switch (_LO) do
 {
-	//Squad leader equipment
+	// Squad leader equipment
 	case "1IC":
 	{
-		//basic gear
+		// basic gear
 		[_rifleSL, _vestSL, _backpack] call addBasics;
 
-		//uniform gear
+		// uniform gear
 		call addBandage;
 		
-		//vest gear
+		// vest gear
 		call addVestItems;
 		for "_i" from 1 to 9 do { _plyer addItemToVest "UK3CB_BAF_1Rnd_HEDP_Grenade_Shell"};
 		for "_i" from 1 to 2 do { _plyer addItemToVest "UK3CB_BAF_1Rnd_SmokeRed_Grenade_shell"};
 		
-		//Backpack items
+		// Backpack items
 		call addBackpackItems;
 		for "_i" from 1 to 2 do { _plyer addItemToBackpack "UK3CB_BAF_SmokeShellRed"};
 		for "_i" from 1 to 2 do { _plyer addItemToBackpack "UK3CB_BAF_SmokeShell"};
@@ -218,10 +218,10 @@ switch (_LO) do
 	// 2IC and Radio operator
 	case "2IC":
 	{
-		//basic gear
-		[_rifleSL, _vestSL, _longRangeRadioBP] call addBasics;
+		// basic gear
+		[_rifleSL, _vestSL, _backpack] call addBasics;
 		
-		//uniform gear
+		// uniform gear
 		call addBandage;
 				
 		//vest gear
@@ -229,7 +229,7 @@ switch (_LO) do
 		for "_i" from 1 to 9 do { _plyer addItemToVest "UK3CB_BAF_1Rnd_HEDP_Grenade_Shell"};
 		for "_i" from 1 to 2 do { _plyer addItemToVest "UK3CB_BAF_1Rnd_SmokeRed_Grenade_shell"};
 				
-		//Backpack items
+		// Backpack items
 		call addBackpackItems;
 		for "_i" from 1 to 2 do { _plyer addItemToBackpack "UK3CB_BAF_SmokeShellRed"};
 		for "_i" from 1 to 2 do { _plyer addItemToBackpack "UK3CB_BAF_SmokeShell"};
@@ -239,21 +239,63 @@ switch (_LO) do
 		for "_i" from 1 to 2 do { _plyer addItemToBackpack "rhs_mag_m67"};
 		for "_i" from 1 to 2 do { _plyer addItemToBackpack "kat_larynx"};
 	};
+
+	case "MEDIC":
+	{
+		// basic gear
+		[_rifle, _vestMedic, _backpackMedic] call addBasics;
+		
+		// add items to uniform
+		_plyer addItemToUniform "ACE_EarPlugs";
+		_plyer addItemToUniform "ItemcTabHCam";
+		_plyer addItemToUniform "ACE_EntrenchingTool";
+
+		// vest gear
+		call addVestItems;
+		for "_i" from 1 to 2 do { _plyer addItemToVest "rhs_mag_m67"};
+		_plyer addItemToVest "rhsusf_ANPVS_14";
+		
+		// add medics backpack and contents
+		_plyer call addMedicBackpack;
+	};
 	
-	//249 Machine Gunner
+	case "EOD":
+	{
+		// basic gear
+		[_rifle, _vestRifle, _backpack] call addBasics;
+		
+		// uniform gear
+		call addBandage;
+		
+		// vest gear
+		call addVestItems;
+		_plyer addItemToVest "ACE_VMH3";
+		
+		// backpack items
+		call addBackpackItems;
+		for "_i" from 1 to 3 do { _plyer addItemToBackpack "rhs_mag_m67"};
+		for "_i" from 1 to 3 do { _plyer addItemToBackpack "ACE_CTS9"};
+		for "_i" from 1 to 2 do { _plyer addItemToBackpack "UK3CB_BAF_SmokeShell"};
+		for "_i" from 1 to 6 do { _plyer addItemToBackpack "rhsusf_m112_mag"};
+		_plyer addItemToBackpack "ACE_DefusalKit";
+		_plyer addItemToBackpack "Toolkit";
+		_plyer addItemToBackpack "ACE_Clacker";
+	};
+	
+	// 249 Machine Gunner
 	case "249MG":
 	{
-		//basic gear
+		// basic gear
 		[_MG249, _vestRifle, _backpack] call addBasics;
 
-		//uniform gear
+		// uniform gear
 		call addBandage;
 				
-		//vest gear
+		// vest gear
 		for "_i" from 1 to 3 do {_plyer addItemToVest _pistolMag;};
 		for "_i" from 1 to 2 do {_plyer addItemToVest _MG249Mag;};
 				
-		//backpack items
+		// backpack items
 		call addBackpackItems;
 		for "_i" from 1 to 2 do {_plyer addItemToBackpack _MG249Mag;};
 		for "_i" from 1 to 3 do { _plyer addItemToBackpack "rhs_mag_m67"};
@@ -261,41 +303,57 @@ switch (_LO) do
 		for "_i" from 1 to 2 do { _plyer addItemToBackpack "UK3CB_BAF_SmokeShell"};
 	};
 	
-	//240 Machine Gunner
+	// 240 Machine Gunner
 	case "240MG":
 	{
-		//basic gear
+		// basic gear
 		[_MG240, _vestRifle, _backpack] call addBasics;
 
-		//uniform gear
+		// uniform gear
 		call addBandage;
 		
-		//vest gear
+		// vest gear
 		for "_i" from 1 to 3 do {_plyer addItemToVest _pistolMag;};
 		for "_i" from 1 to 3 do {_plyer addItemToVest _MG240Mag;};
 		
-		//backpack items
+		// backpack items
 		call addBackpackItems;
 		for "_i" from 1 to 3 do {_plyer addItemToBackpack _MG240Mag;};
 		for "_i" from 1 to 3 do { _plyer addItemToBackpack "rhs_mag_m67"};
 		for "_i" from 1 to 3 do { _plyer addItemToBackpack "ACE_CTS9"};
 		for "_i" from 1 to 2 do { _plyer addItemToBackpack "UK3CB_BAF_SmokeShell"};
 	};
+
+	// Rifleman Equipment
+	case "RFL":
+	{
+		// basic gear
+		[_rifle, _vestRifle, _backpack] call addBasics;
+
+		// uniform gear
+		call addBandage;
+
+		// add vest gear
+		call addVestItems;
+
+		// add backpack items
+		call addBackpackItems;
+	};
 	
-	//marksman equipment
+	// marksman equipment
 	case "MARKSMAN":
 	{
-		//basic gear
+		// basic gear
 		[_rifleMarksman, _vestRifle, _backpack] call addBasics;	
 
-		//uniform gear
+		// uniform gear
 		call addBandage;
 		
-		//vest gear
+		// vest gear
 		for "_i" from 1 to 3 do {_plyer addItemToVest _pistolMag;};
 		for "_i" from 1 to 9 do {_plyer addItemToVest _rifleMarksmanMag;};
 		
-		//backpack items
+		// backpack items
 		call addBackpackItems;
 		_plyer addItemToVest _rifleMarksmanMag;
 		for "_i" from 1 to 3 do { _plyer addItemToBackpack "rhs_mag_m67"};
@@ -305,64 +363,22 @@ switch (_LO) do
 	
 	case "HAT":
 	{
-		//basic gear
+		// basic gear
 		[_rifle, _vestRifle, _backpack] call addBasics;
 
 		_plyer addWeapon "rhs_weap_fgm148";
 		_plyer addWeaponItem ["rhs_weap_fgm148", "rhs_fgm148_magazine_AT"];
 		
-		//uniform gear
+		// uniform gear
 		call addBandage;
 		
-		//vest gear
+		// vest gear
 		call addVestItems;
 		
-		//backpack items
+		// backpack items
 		call addBackpackItems;
 		for "_i" from 1 to 3 do { _plyer addItemToBackpack "rhs_mag_m67"};
 		for "_i" from 1 to 3 do { _plyer addItemToBackpack "ACE_CTS9"};
 		for "_i" from 1 to 2 do { _plyer addItemToBackpack "UK3CB_BAF_SmokeShell"};
-	};
-	
-	case "MEDIC":
-	{
-		//basic gear
-		[_rifle, _vestMedic, _backpackMedic] call addBasics;
-		
-		//add items to uniform
-		_plyer addItemToUniform "ACE_EarPlugs";
-		_plyer addItemToUniform "ItemcTabHCam";
-		_plyer addItemToUniform "ACE_EntrenchingTool";
-
-		//vest gear
-		call addVestItems;
-		for "_i" from 1 to 2 do { _plyer addItemToVest "rhs_mag_m67"};
-		_plyer addItemToVest "rhsusf_ANPVS_14";
-		
-		//add medics backpack and contents
-		_plyer call addMedicBackpack;
-	};
-	
-	case "EOD":
-	{
-		//basic gear
-		[_rifle, _vestRifle, _backpack] call addBasics;
-		
-		//uniform gear
-		call addBandage;
-		
-		//vest gear
-		call addVestItems;
-		_plyer addItemToVest "ACE_VMH3";
-		
-		//backpack items
-		call addBackpackItems;
-		for "_i" from 1 to 3 do { _plyer addItemToBackpack "rhs_mag_m67"};
-		for "_i" from 1 to 3 do { _plyer addItemToBackpack "ACE_CTS9"};
-		for "_i" from 1 to 2 do { _plyer addItemToBackpack "UK3CB_BAF_SmokeShell"};
-		for "_i" from 1 to 6 do { _plyer addItemToBackpack "rhsusf_m112_mag"};
-		_plyer addItemToBackpack "ACE_DefusalKit";
-		_plyer addItemToBackpack "Toolkit";
-		_plyer addItemToBackpack "ACE_Clacker";
 	};
 };
