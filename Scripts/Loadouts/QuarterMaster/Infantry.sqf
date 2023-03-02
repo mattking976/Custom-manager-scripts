@@ -71,6 +71,9 @@ _gasMask = "G_CBRN_M04_Hood";
 // Ctab tablet
 _cTab = "ItemcTab";
 
+// gps
+_gps = "ItemGPS";
+
 // ------------------------------------------------
 
 addBasics = {
@@ -319,6 +322,9 @@ switch (_LO) do
 		_plyer addItemToUniform "ItemcTabHCam";
 		_plyer addItemToUniform "ACE_EntrenchingTool";
 
+		// add gps
+		_plyer addWeapon _gps;
+
 		// vest gear
 		call addVestItems;
 		for "_i" from 1 to 2 do { _plyer addItemToVest "rhs_mag_m67"};
@@ -339,6 +345,9 @@ switch (_LO) do
 		// vest gear
 		call addVestItems;
 		_plyer addItemToVest "ACE_VMH3";
+
+		// add gps
+		_plyer addWeapon _gps;
 		
 		// backpack items
 		call addBackpackItems;
@@ -359,6 +368,9 @@ switch (_LO) do
 
 		// uniform gear
 		call addBandage;
+
+		// add gps
+		_plyer addWeapon _gps;
 				
 		// vest gear
 		for "_i" from 1 to 3 do {_plyer addItemToVest _pistolMag;};
@@ -380,6 +392,9 @@ switch (_LO) do
 
 		// uniform gear
 		call addBandage;
+
+		// add gps
+		_plyer addWeapon _gps;
 		
 		// vest gear
 		for "_i" from 1 to 3 do {_plyer addItemToVest _pistolMag;};
@@ -402,6 +417,9 @@ switch (_LO) do
 		// uniform gear
 		call addBandage;
 
+		// add gps
+		_plyer addWeapon _gps;
+
 		// add vest gear
 		call addVestItems;
 
@@ -418,6 +436,9 @@ switch (_LO) do
 		// uniform gear
 		call addBandage;
 
+		// add gps
+		_plyer addWeapon _gps;
+
 		// add vest gear
 		call addVestItems;
 
@@ -433,6 +454,9 @@ switch (_LO) do
 
 		// uniform gear
 		call addBandage;
+
+		// add gps
+		_plyer addWeapon _gps;
 		
 		// vest gear
 		for "_i" from 1 to 3 do {_plyer addItemToVest _pistolMag;};
@@ -456,6 +480,9 @@ switch (_LO) do
 		
 		// uniform gear
 		call addBandage;
+
+		// add gps
+		_plyer addWeapon _gps;
 		
 		// vest gear
 		call addVestItems;
