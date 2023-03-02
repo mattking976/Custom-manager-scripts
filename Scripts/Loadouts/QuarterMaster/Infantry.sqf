@@ -67,6 +67,10 @@ _binoculars = "ACE_VectorDay";
 
 // gas mask
 _gasMask = "G_CBRN_M04_Hood";
+
+// Ctab tablet
+_cTab = "ItemcTab";
+
 // ------------------------------------------------
 
 addBasics = {
@@ -194,6 +198,61 @@ addMedicBackpack = {
 
 switch (_LO) do
 {
+	case "HQCOL":
+	{
+		// basic gear
+		[_rifleSL, _vestSL, _backpack] call addBasics;
+
+		// uniform gear
+		call addBandage;
+
+		// add cTab
+		_plyer addWeapon _cTab;
+		
+		// vest gear
+		call addVestItems;
+		for "_i" from 1 to 9 do { _plyer addItemToVest "UK3CB_BAF_1Rnd_HEDP_Grenade_Shell"};
+		for "_i" from 1 to 2 do { _plyer addItemToVest "UK3CB_BAF_1Rnd_SmokeRed_Grenade_shell"};
+		
+		// Backpack items
+		call addBackpackItems;
+		for "_i" from 1 to 2 do { _plyer addItemToBackpack "UK3CB_BAF_SmokeShellRed"};
+		for "_i" from 1 to 2 do { _plyer addItemToBackpack "UK3CB_BAF_SmokeShell"};
+		for "_i" from 1 to 2 do { _plyer addItemToBackpack "UK3CB_BAF_SmokeShellGreen"};
+		for "_i" from 1 to 3 do { _plyer addItemToBackpack "UK3CB_BAF_1Rnd_Smoke_Grenade_shell"};
+		for "_i" from 1 to 3 do { _plyer addItemToBackpack "UK3CB_BAF_1Rnd_SmokeGreen_Grenade_shell"};
+		for "_i" from 1 to 2 do { _plyer addItemToBackpack "rhs_mag_m67"};
+		for "_i" from 1 to 2 do { _plyer addItemToBackpack "kat_larynx"};
+	};
+
+	// Zeus case
+	case "ZEUS":
+	{
+		// basic gear
+		[_rifleSL, _vestSL, _longRangeRadioBP] call addBasics;
+
+		// uniform gear
+		call addBandage;
+
+		// add cTab
+		_plyer addWeapon _cTab;
+		
+		// vest gear
+		call addVestItems;
+		for "_i" from 1 to 9 do { _plyer addItemToVest "UK3CB_BAF_1Rnd_HEDP_Grenade_Shell"};
+		for "_i" from 1 to 2 do { _plyer addItemToVest "UK3CB_BAF_1Rnd_SmokeRed_Grenade_shell"};
+		
+		// Backpack items
+		call addBackpackItems;
+		for "_i" from 1 to 2 do { _plyer addItemToBackpack "UK3CB_BAF_SmokeShellRed"};
+		for "_i" from 1 to 2 do { _plyer addItemToBackpack "UK3CB_BAF_SmokeShell"};
+		for "_i" from 1 to 2 do { _plyer addItemToBackpack "UK3CB_BAF_SmokeShellGreen"};
+		for "_i" from 1 to 3 do { _plyer addItemToBackpack "UK3CB_BAF_1Rnd_Smoke_Grenade_shell"};
+		for "_i" from 1 to 3 do { _plyer addItemToBackpack "UK3CB_BAF_1Rnd_SmokeGreen_Grenade_shell"};
+		for "_i" from 1 to 2 do { _plyer addItemToBackpack "rhs_mag_m67"};
+		for "_i" from 1 to 2 do { _plyer addItemToBackpack "kat_larynx"};
+	};
+
 	// Squad leader equipment
 	case "1IC":
 	{
@@ -202,6 +261,9 @@ switch (_LO) do
 
 		// uniform gear
 		call addBandage;
+
+		// add cTab
+		_plyer addWeapon _cTab;
 		
 		// vest gear
 		call addVestItems;
@@ -227,6 +289,9 @@ switch (_LO) do
 		
 		// uniform gear
 		call addBandage;
+
+		// add cTab
+		_plyer addWeapon _cTab;
 				
 		//vest gear
 		call addVestItems;
@@ -333,6 +398,22 @@ switch (_LO) do
 	{
 		// basic gear
 		[_rifle, _vestRifle, _backpack] call addBasics;
+
+		// uniform gear
+		call addBandage;
+
+		// add vest gear
+		call addVestItems;
+
+		// add backpack items
+		call addBackpackItems;
+	};
+
+	// RTO Equipment
+	case "RTO":
+	{
+		// basic gear
+		[_rifle, _vestRifle, _longRangeRadioBP] call addBasics;
 
 		// uniform gear
 		call addBandage;
