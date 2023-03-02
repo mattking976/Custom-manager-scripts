@@ -1,4 +1,4 @@
-//Vehicle Manager script inits
+// Vehicle Manager script inits
 call{
 	VM allowDamage false;
 	VM disableAI "MOVE";
@@ -7,7 +7,7 @@ call{
 	null = [] execVM "Scripts\VehicleSpawn\Menu\mainmenu.sqf";
 };
 
-//Quartermaster script inits
+// Quartermaster script inits
 call{
 	WM allowDamage false;
 	WM disableAI "MOVE";

@@ -1,10 +1,10 @@
 _LO = ((_this select 3) select 0) select 0;
 
-//classnames
+// classnames
 _wildcatArmed = "UK3CB_BAF_Wildcat_AH1_6_Generic_MTP";
 _chinook = "UK3CB_BAF_Chinook_HC2_MTP";
 _merlin = "UK3CB_BAF_Merlin_HC3_18_GPMG_MTP";
-_MQ9 = "UK3CB_BAF_MQ9_Reaper_Generic_MTP";
+// _MQ9 = "UK3CB_BAF_MQ9_Reaper_Generic_MTP";
 
 spawnAIR = {
 	params ["_location", "_aircraft"];
