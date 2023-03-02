@@ -1,6 +1,6 @@
 _LO = ((_this select 3) select 0) select 0;
 
-//classnames
+// classnames
 _coyoteGMG = "UK3CB_BAF_Coyote_Logistics_L134A1_W_MTP";
 _coyoteHMG = "UK3CB_BAF_Coyote_Logistics_L111A1_W_MTP";
 _jackal_GMG = "UK3CB_BAF_Jackal2_GMG_W_MTP";
