@@ -64,6 +64,7 @@ _backpackMedic = "B_Bergen_mcamo_F";
 
 // binoculars
 _binoculars = "ACE_VectorDay";
+_designator = "Laserdesignator";
 
 // gas mask
 _gasMask = "G_CBRN_M04_Hood";
@@ -138,6 +139,7 @@ addBasics = {
 	// Other Equipment
 	_plyer addHeadgear _helmet;
 	_plyer addWeapon _binoculars;
+	_plyer addWeapon _designator; 
 };
 
 // function for adding bandages to players uniform
@@ -343,8 +345,6 @@ switch (_LO) do
 		call addBandage;
 		
 		// vest gear
-		call addVestItems;
-		_plyer addItemToVest "ACE_VMH3";
 
 		// add gps
 		_plyer addWeapon _gps;
@@ -358,6 +358,7 @@ switch (_LO) do
 		_plyer addItemToBackpack "ACE_DefusalKit";
 		_plyer addItemToBackpack "Toolkit";
 		_plyer addItemToBackpack "ACE_Clacker";
+		_plyer addItemToBackpack "ACE_VMH3";
 	};
 	
 	// 249 Machine Gunner
@@ -438,6 +439,9 @@ switch (_LO) do
 
 		// add gps
 		_plyer addWeapon _gps;
+
+		// add designator
+		_plyer addWeapon _designator;
 
 		// add vest gear
 		call addVestItems;
