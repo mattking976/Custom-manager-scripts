@@ -64,8 +64,6 @@ _backpackMedic = "B_Bergen_mcamo_F";
 
 // binoculars
 _binoculars = "ACE_VectorDay";
-_designator = "Laserdesignator";
-_batteries = "Laserbatteries";
 
 // gas mask
 _gasMask = "G_CBRN_M04_Hood";
@@ -139,12 +137,10 @@ addBasics = {
 
 	// Other Equipment
 	_plyer addHeadgear _helmet;
-	if (_LO == "RTO") then 
+	if (_LO != "RTO") then 
 	{
-		_plyer addWeapon _designator;
-	} else {
 		_plyer addWeapon _binoculars;
-	};
+	} 
 };
 
 // function for adding bandages to players uniform
@@ -448,8 +444,7 @@ switch (_LO) do
 
 		// add vest gear
 		call addVestItems;
-		_plyer addItem _batteries;
-
+		
 		// add backpack items
 		call addBackpackItems;
 	};
