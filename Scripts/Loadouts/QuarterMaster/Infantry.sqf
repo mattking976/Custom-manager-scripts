@@ -448,8 +448,7 @@ switch (_LO) do
 
 		// add vest gear
 		call addVestItems;
-		_plyer addBinocularItem _batteries;
-		_plyer reload [_designator, _batteries];
+		_plyer addItem _batteries;
 
 		// add backpack items
 		call addBackpackItems;
