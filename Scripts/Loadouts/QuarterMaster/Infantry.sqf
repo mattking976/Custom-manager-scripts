@@ -138,7 +138,12 @@ addBasics = {
 
 	// Other Equipment
 	_plyer addHeadgear _helmet;
-	_plyer addWeapon _binoculars;
+	if (_LO == "RTO") then 
+	{
+		_plyer addWeapon _designator;
+	} else {
+		_plyer addWeapon _binoculars;
+	};
 };
 
 // function for adding bandages to players uniform
@@ -344,6 +349,7 @@ switch (_LO) do
 		call addBandage;
 		
 		// vest gear
+		call addVestItems;
 
 		// add gps
 		_plyer addWeapon _gps;
@@ -438,9 +444,6 @@ switch (_LO) do
 
 		// add gps
 		_plyer addWeapon _gps;
-
-		// add designator
-		_plyer addWeapon Laserdesignator;
 
 		// add vest gear
 		call addVestItems;
