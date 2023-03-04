@@ -140,7 +140,7 @@ addBasics = {
 	_plyer addHeadgear _helmet;
 	if (_LO == "RTO") then 
 	{
-		_plyer addWeaponItem [_designator, "Laserbatteries"];
+		_plyer addWeaponItem [_designator, ["Laserbatteries", 1]];
 	} else {
 		_plyer addWeapon _binoculars;
 	};
