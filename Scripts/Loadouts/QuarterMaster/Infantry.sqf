@@ -137,7 +137,10 @@ addBasics = {
 
 	// Other Equipment
 	_plyer addHeadgear _helmet;
-	_plyer addWeapon _binoculars;
+	if (_LO != "RTO") then 
+	{
+		_plyer addWeapon _binoculars;
+	} 
 };
 
 // function for adding bandages to players uniform
@@ -344,7 +347,6 @@ switch (_LO) do
 		
 		// vest gear
 		call addVestItems;
-		_plyer addItemToVest "ACE_VMH3";
 
 		// add gps
 		_plyer addWeapon _gps;
@@ -358,6 +360,7 @@ switch (_LO) do
 		_plyer addItemToBackpack "ACE_DefusalKit";
 		_plyer addItemToBackpack "Toolkit";
 		_plyer addItemToBackpack "ACE_Clacker";
+		_plyer addItemToBackpack "ACE_VMH3";
 	};
 	
 	// 249 Machine Gunner
@@ -441,9 +444,16 @@ switch (_LO) do
 
 		// add vest gear
 		call addVestItems;
-
+		
 		// add backpack items
 		call addBackpackItems;
+
+		"Warning!" hintC [
+			"You have selected RTO",
+			"To complete your kit please collect a pair of Laser Designators",
+			"They are one of the boxes beside the quartermaster.",
+			"Enjoy the OP!"
+		];
 	};
 	
 	// marksman equipment
