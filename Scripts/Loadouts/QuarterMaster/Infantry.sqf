@@ -447,6 +447,13 @@ switch (_LO) do
 		
 		// add backpack items
 		call addBackpackItems;
+
+		"Warning!" hintC [
+			"You have selected RTO",
+			"To complete your kit please collect a pair of Laser Designators",
+			"They are one of the boxes beside the quartermaster.",
+			"Enjoy the OP!"
+		];
 	};
 	
 	// marksman equipment
