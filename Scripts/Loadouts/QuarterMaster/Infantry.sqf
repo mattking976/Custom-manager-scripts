@@ -59,7 +59,7 @@ _MG240Mag = "rhsusf_100Rnd_762x51";
 
 // backpacks including LR Radios
 _backpack = "mpx_daysack8";
-_longRangeRadioBP = "TFAR_anprc155";
+_longRangeRadioBP = "TFAR_rt1523g_big_rhs";
 _backpackMedic = "B_Bergen_mcamo_F";
 
 // binoculars
@@ -191,7 +191,6 @@ addMedicBackpack = {
 	for "_i" from 1 to 10 do { _plyer addItemToBackpack "kat_amiodarone"};
 	for "_i" from 1 to 20 do { _plyer addItemToBackpack "kat_etomidate"};
 	for "_i" from 1 to 10 do { _plyer addItemToBackpack "kat_atropine"};
-	for "_i" from 1 to 2 do { _plyer addItemToBackpack "Attachable_Helistretcher"};
 	for "_i" from 1 to 10 do { _plyer addItemToBackpack "kat_larynx"};
 	for "_i" from 1 to 5 do { _plyer addItemToBackpack "kat_naloxone"};
 	for "_i" from 1 to 10 do { _plyer addItemToBackpack "kat_Carbonate"};
@@ -200,6 +199,7 @@ addMedicBackpack = {
 	_plyer addItemToBackpack "kat_retractor";
 	_plyer addItemToBackpack "kat_X_AED";
 	_plyer addItemToBackpack _gasMask;
+	_plyer addItemToBackpack "rhsusf_ANPVS_14";
 };
 
 switch (_LO) do
@@ -425,6 +425,9 @@ switch (_LO) do
 
 		// add vest gear
 		call addVestItems;
+		for "_i" from 1 to 3 do { _plyer addItemToBackpack "rhs_mag_m67"};
+		for "_i" from 1 to 3 do { _plyer addItemToBackpack "ACE_CTS9"};
+		for "_i" from 1 to 2 do { _plyer addItemToBackpack "UK3CB_BAF_SmokeShell"};
 
 		// add backpack items
 		call addBackpackItems;
@@ -444,6 +447,9 @@ switch (_LO) do
 
 		// add vest gear
 		call addVestItems;
+		for "_i" from 1 to 3 do { _plyer addItemToBackpack "rhs_mag_m67"};
+		for "_i" from 1 to 3 do { _plyer addItemToBackpack "ACE_CTS9"};
+		for "_i" from 1 to 2 do { _plyer addItemToBackpack "UK3CB_BAF_SmokeShell"};
 		
 		// add backpack items
 		call addBackpackItems;
