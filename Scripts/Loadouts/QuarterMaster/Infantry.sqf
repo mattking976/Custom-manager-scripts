@@ -59,7 +59,7 @@ _MG240Mag = "rhsusf_100Rnd_762x51";
 
 // backpacks including LR Radios
 _backpack = "mpx_daysack8";
-_longRangeRadioBP = "TFAR_anprc155";
+_longRangeRadioBP = "TFAR_rt1523g_big_rhs";
 _backpackMedic = "B_Bergen_mcamo_F";
 
 // binoculars
