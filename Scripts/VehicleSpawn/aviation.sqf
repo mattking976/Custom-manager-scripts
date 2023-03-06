@@ -2,8 +2,11 @@ _LO = ((_this select 3) select 0) select 0;
 
 // classnames
 _wildcatArmed = "UK3CB_BAF_Wildcat_AH1_6_Generic_MTP";
+_wildcatArmedg = "CUP_B_AW159_GB";
 _chinook = "UK3CB_BAF_Chinook_HC2_MTP";
 _merlin = "UK3CB_BAF_Merlin_HC3_18_GPMG_MTP";
+_puma1 = "CUP_B_SA330_Puma_HC1_BAF";
+_puma2 = "CUP_B_SA330_Puma_HC2_BAF";
 // _MQ9 = "UK3CB_BAF_MQ9_Reaper_Generic_MTP";
 
 spawnAIR = {
@@ -27,6 +30,11 @@ switch (_LO) do
 		[HeliPad, _wildcatArmed] call spawnAIR;
 	};
 
+	case "WCARMEDG":
+	{
+		[HeliPad, _wildcatArmedg] call spawnAIR;
+	};
+
 	case "CHINOOK":
 	{
 		[HeliPad, _chinook] call spawnAIR;
@@ -35,5 +43,15 @@ switch (_LO) do
 	case "MERLIN":
 	{
 		[HeliPad, _merlin] call spawnAIR;
+	};
+
+	case "PUMA":
+	{
+		[HeliPad, _puma1] call spawnAIR;
+	};
+
+	case "PUMAC":
+	{
+		[HeliPad, _puma2] call spawnAIR;
 	};
 };
