@@ -5,8 +5,8 @@ _wildcatArmed = "UK3CB_BAF_Wildcat_AH1_6_Generic_MTP";
 _wildcatArmedg = "CUP_B_AW159_GB";
 _chinook = "UK3CB_BAF_Chinook_HC2_MTP";
 _merlin = "UK3CB_BAF_Merlin_HC3_18_GPMG_MTP";
-_puma1 = "CUP_B_SA330_Puma_HC1_BAF";
-_puma2 = "CUP_B_SA330_Puma_HC2_BAF";
+_pumaHC1 = "CUP_B_SA330_Puma_HC1_BAF";
+_pumaHC2 = "CUP_B_SA330_Puma_HC2_BAF";
 // _MQ9 = "UK3CB_BAF_MQ9_Reaper_Generic_MTP";
 
 spawnAIR = {
@@ -47,11 +47,11 @@ switch (_LO) do
 
 	case "PUMA":
 	{
-		[HeliPad, _puma1] call spawnAIR;
+		[HeliPad, _pumaHC1] call spawnAIR;
 	};
 
 	case "PUMAC":
 	{
-		[HeliPad, _puma2] call spawnAIR;
+		[HeliPad, _pumaHC2] call spawnAIR;
 	};
 };
