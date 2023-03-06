@@ -15,7 +15,7 @@ removeGoggles _plyer;
 
 // uniform vest and helmet
 _uniform = "CUP_U_B_BAF_MTP_UBACSLONGKNEE_Gloves";
-_helmet = "UK3CB_BAF_H_Mk7_Scrim_ESS_B";
+_helmet = "mpx_cobra";
 _vestRifle = "mpx_virtus_p"; // vest is the same for all except SL and medic
 
 // medic vest
