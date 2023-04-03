@@ -60,7 +60,7 @@ _MG240Mag = "rhsusf_100Rnd_762x51";
 // backpacks including LR Radios
 _backpack = "mpx_daysack8";
 _longRangeRadioBP = "TFAR_rt1523g_big_rhs";
-_backpackMedic = "B_Bergen_mcamo_F";
+_backpackMedic = "mpx_daysack7";
 
 // binoculars
 _binoculars = "ACE_VectorDay";
@@ -174,32 +174,27 @@ addBackpackItems = {
 // full medic backpack content.
 addMedicBackpack = {
 	// add medical and misc content
-	for "_i" from 1 to 5 do { _plyer addItemToBackpack "ACE_splint"};
-	for "_i" from 1 to 5 do { _plyer addItemToBackpack "ACE_tourniquet"};
-	for "_i" from 1 to 40 do { _plyer addItemToBackpack "ACE_packingBandage"};
-	for "_i" from 1 to 10 do { _plyer addItemToBackpack "kat_chestSeal"};
-	for "_i" from 1 to 5 do { _plyer addItemToBackpack "kat_plate"};
-	for "_i" from 1 to 5 do { _plyer addItemToBackpack "kat_clamp"};
-	for "_i" from 1 to 20 do { _plyer addItemToBackpack "ACE_epinephrine"};
-	for "_i" from 1 to 25 do { _plyer addItemToBackpack "ACE_morphine"};
-	for "_i" from 1 to 10 do { _plyer addItemToBackpack "ACE_plasmaIV_250"};
-	for "_i" from 1 to 10 do { _plyer addItemToBackpack "ACE_plasmaIV_500"};
-	for "_i" from 1 to 15 do { _plyer addItemToBackpack "ACE_plasmaIV"};
-	for "_i" from 1 to 10 do { _plyer addItemToBackpack "kat_lidocaine"};
-	for "_i" from 1 to 10 do { _plyer addItemToBackpack "kat_lorazepam"};
-	for "_i" from 1 to 10 do { _plyer addItemToBackpack "kat_flumazenil"};
-	for "_i" from 1 to 10 do { _plyer addItemToBackpack "kat_amiodarone"};
-	for "_i" from 1 to 20 do { _plyer addItemToBackpack "kat_etomidate"};
-	for "_i" from 1 to 10 do { _plyer addItemToBackpack "kat_atropine"};
-	for "_i" from 1 to 10 do { _plyer addItemToBackpack "kat_larynx"};
-	for "_i" from 1 to 5 do { _plyer addItemToBackpack "kat_naloxone"};
-	for "_i" from 1 to 10 do { _plyer addItemToBackpack "kat_Carbonate"};
-	_plyer addItemToBackpack "kat_scalpel";
-	_plyer addItemToBackpack "ACE_surgicalKit";
-	_plyer addItemToBackpack "kat_retractor";
-	_plyer addItemToBackpack "kat_X_AED";
 	_plyer addItemToBackpack _gasMask;
 	_plyer addItemToBackpack "rhsusf_ANPVS_14";
+	_plyer addItemToBackpack "ACE_surgicalKit";
+	_plyer addItemToBackpack "kat_X_AED";
+	for "_i" from 1 to 15 do { _plyer addItemToBackpack "ACE_packingBandage"};
+	for "_i" from 1 to 15 do { _plyer addItemToBackpack "ACE_elasticBandage"};
+	for "_i" from 1 to 15 do { _plyer addItemToBackpack "ACE_quikclot"};
+	for "_i" from 1 to 5 do { _plyer addItemToBackpack "kat_atropine"};
+	for "_i" from 1 to 5 do { _plyer addItemToBackpack "kat_larynx"};
+	for "_i" from 1 to 15 do { _plyer addItemToBackpack "ACE_morphine"};
+	for "_i" from 1 to 10 do { _plyer addItemToBackpack "ACE_tourniquet"};
+	for "_i" from 1 to 10 do { _plyer addItemToBackpack "ACE_splint"};
+	for "_i" from 1 to 12 do { _plyer addItemToBackpack "ACE_plasmaIV"};
+	for "_i" from 1 to 10 do { _plyer addItemToBackpack "ACE_plasmaIV_500"};
+	for "_i" from 1 to 15 do { _plyer addItemToBackpack "ACE_epinephrine"};
+	for "_i" from 1 to 5 do { _plyer addItemToBackpack "kat_chestSeal"};
+	for "_i" from 1 to 5 do { _plyer addItemToBackpack "kat_lidocaine"};
+	for "_i" from 1 to 5 do { _plyer addItemToBackpack "kat_amiodarone"};
+	for "_i" from 1 to 5 do { _plyer addItemToBackpack "kat_naloxone"};
+	for "_i" from 1 to 5 do { _plyer addItemToBackpack "kat_ncdKit"};
+	for "_i" from 1 to 10 do { _plyer addItemToBackpack "kat_Carbonate"};
 };
 
 switch (_LO) do
