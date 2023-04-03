@@ -25,6 +25,7 @@ _vestMedic = "mpx_virtus_Medic_p";
 // common attachments
 _rifleOptic = "rksl_optic_lds";
 _rifleLLM = "UK3CB_BAF_LLM_IR_Black";
+_rifleFlashHider = "UK3CB_BAF_SFFH";
 
 // SL
 _rifleSL = "UK3CB_BAF_L85A3_UGL";
@@ -89,6 +90,7 @@ addBasics = {
 		{
 			_plyer addPrimaryWeaponItem _rifleLLM;
 			_plyer addPrimaryWeaponItem _rifleOptic;
+			_plyer addPrimaryWeaponItem _rifleFlashHider;
 			_plyer addPrimaryWeaponItem _rifleMag;
 			_plyer addVest _vest;
 		};
@@ -120,6 +122,7 @@ addBasics = {
 			_plyer addPrimaryWeaponItem _rifleOptic;
 			_plyer addPrimaryWeaponItem _rifleLLM;
 			_plyer addPrimaryWeaponItem _rifleGripPod;
+			_plyer addPrimaryWeaponItem _rifleFlashHider;
 			_plyer addPrimaryWeaponItem _rifleMag;
 			_plyer addVest _vest;
 		};
