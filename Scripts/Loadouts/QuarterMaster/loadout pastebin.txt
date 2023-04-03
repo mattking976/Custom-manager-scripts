@@ -34,6 +34,38 @@ heavy anti tank
 
 
 medic
-
+[[
+["UK3CB_BAF_L85A3_Grippod","","UK3CB_BAF_LLM_IR_Black","RKSL_optic_LDS_PiP",["UK3CB_BAF_556_30Rnd",30],[],"UK3CB_underbarrel_acc_grippod"],
+[],
+["UK3CB_BAF_L131A1","","","",["UK3CB_BAF_9_17Rnd",17],[],""],
+["CUP_U_B_BAF_MTP_UBACSLONGKNEE_Gloves",[["ACE_EarPlugs",1],["ItemcTabHCam",1],["ACE_EntrenchingTool",1]]],
+["mpx_virtus_Medic_p",[["UK3CB_BAF_9_17Rnd",3,17],["UK3CB_BAF_556_30Rnd",10,30],["kat_Painkiller",1,10],["rhs_mag_m67",2,1]]],
+["mpx_daysack7",[
+    ["rhsusf_ANPVS_14",1],
+    ["G_CBRN_M04_Hood",1],
+    ["ACE_surgicalKit",1],
+    ["ACE_packingBandage",15],
+    ["ACE_elasticBandage",15],
+    ["ACE_quikclot",15],
+    ["kat_X_AED",1],
+    ["kat_atropine",5],
+    ["kat_larynx",5],
+    ["ACE_morphine",15],
+    ["ACE_tourniquet",10],
+    ["ACE_splint",10],
+    ["ACE_plasmaIV",12],
+    ["ACE_plasmaIV_500",10],
+    ["ACE_epinephrine",15],
+    ["kat_chestSeal",5],
+    ["kat_lidocaine",5],
+    ["kat_amiodarone",5],
+    ["kat_naloxone",5],
+    ["kat_ncdKit",5],
+    ["kat_Carbonate",10,10]]],
+    "mpx_cobra",
+    "",
+    ["ACE_VectorDay","","","",[],[],""],
+    ["ItemMap","ItemGPS","TFAR_anprc152_5","ItemCompass","TFAR_microdagr",""]]
+    ,[]]
 
 EOD/LAT
