@@ -75,6 +75,9 @@ _cTab = "ItemcTab";
 // gps
 _gps = "ItemGPS";
 
+// nvgs
+_nvgs = "UK3CB_BAF_HMNVS";
+
 // ------------------------------------------------
 
 addBasics = {
@@ -166,7 +169,7 @@ addBackpackItems = {
 	_plyer addItemToBackpack "ACE_EarPlugs";
 	_plyer addItemToBackpack "ItemcTabHCam";
 	_plyer addItemToBackpack "ACE_EntrenchingTool";
-	_plyer addItemToBackpack "rhsusf_ANPVS_14";
+	_plyer addItemToBackpack _nvgs;
 	_plyer addItemToBackpack _gasMask;
 	for "_i" from 1 to 4 do { _plyer addItemToBackpack "ACE_splint"};
 	for "_i" from 1 to 4 do { _plyer addItemToBackpack "ACE_tourniquet"};
@@ -178,7 +181,7 @@ addBackpackItems = {
 addMedicBackpack = {
 	// add medical and misc content
 	_plyer addItemToBackpack _gasMask;
-	_plyer addItemToBackpack "rhsusf_ANPVS_14";
+	_plyer addItemToBackpack _nvgs;
 	_plyer addItemToBackpack "ACE_surgicalKit";
 	_plyer addItemToBackpack "kat_X_AED";
 	for "_i" from 1 to 15 do { _plyer addItemToBackpack "ACE_packingBandage"};
@@ -329,7 +332,7 @@ switch (_LO) do
 		// vest gear
 		call addVestItems;
 		for "_i" from 1 to 2 do { _plyer addItemToVest "rhs_mag_m67"};
-		_plyer addItemToVest "rhsusf_ANPVS_14";
+		_plyer addItemToVest _nvgs;
 		
 		// add medics backpack and contents
 		_plyer call addMedicBackpack;
