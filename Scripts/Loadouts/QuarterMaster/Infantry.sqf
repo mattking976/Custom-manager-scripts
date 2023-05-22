@@ -332,7 +332,6 @@ switch (_LO) do
 		// vest gear
 		call addVestItems;
 		for "_i" from 1 to 2 do { _plyer addItemToVest "rhs_mag_m67"};
-		_plyer addItemToVest _nvgs;
 		
 		// add medics backpack and contents
 		_plyer call addMedicBackpack;
