@@ -67,7 +67,7 @@ _backpackMedic = "mpx_daysack7";
 _binoculars = "ACE_VectorDay";
 
 // gas mask
-_gasMask = "G_CBRN_M04_Hood";
+_gasMask = "kat_mask_M04";
 
 // Ctab tablet
 _cTab = "ItemcTab";
