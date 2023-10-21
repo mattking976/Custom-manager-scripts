@@ -184,6 +184,7 @@ addMedicBackpack = {
 	_plyer addItemToBackpack _nvgs;
 	_plyer addItemToBackpack "ACE_surgicalKit";
 	_plyer addItemToBackpack "kat_X_AED";
+	_plyer addItemToBackpack "kat_pocketBVM";
 	for "_i" from 1 to 15 do { _plyer addItemToBackpack "ACE_packingBandage"};
 	for "_i" from 1 to 15 do { _plyer addItemToBackpack "ACE_elasticBandage"};
 	for "_i" from 1 to 15 do { _plyer addItemToBackpack "ACE_quikclot"};
@@ -192,14 +193,13 @@ addMedicBackpack = {
 	for "_i" from 1 to 15 do { _plyer addItemToBackpack "ACE_morphine"};
 	for "_i" from 1 to 10 do { _plyer addItemToBackpack "ACE_tourniquet"};
 	for "_i" from 1 to 10 do { _plyer addItemToBackpack "ACE_splint"};
-	for "_i" from 1 to 12 do { _plyer addItemToBackpack "ACE_plasmaIV"};
+	for "_i" from 1 to 13 do { _plyer addItemToBackpack "ACE_plasmaIV"};
 	for "_i" from 1 to 10 do { _plyer addItemToBackpack "ACE_plasmaIV_500"};
 	for "_i" from 1 to 15 do { _plyer addItemToBackpack "ACE_epinephrine"};
 	for "_i" from 1 to 5 do { _plyer addItemToBackpack "kat_chestSeal"};
 	for "_i" from 1 to 5 do { _plyer addItemToBackpack "kat_lidocaine"};
 	for "_i" from 1 to 5 do { _plyer addItemToBackpack "kat_amiodarone"};
 	for "_i" from 1 to 5 do { _plyer addItemToBackpack "kat_naloxone"};
-	for "_i" from 1 to 5 do { _plyer addItemToBackpack "kat_ncdKit"};
 	for "_i" from 1 to 10 do { _plyer addItemToBackpack "kat_Carbonate"};
 };
 
