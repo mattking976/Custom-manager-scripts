@@ -1,47 +1,50 @@
-_plyer = _this select 1;
+plyer = _this select 1;
 _LO = ((_this select 3) select 0) select 0;
 
 //Clearing Inventory
-removeAllWeapons _plyer;  
-removeAllItems _plyer;  
-removeUniform _plyer;  
-removeVest _plyer;  
-removeBackpack _plyer;  
-removeHeadgear _plyer;  
-removeGoggles _plyer; 
+removeAllWeapons plyer;  
+removeAllItems plyer;  
+removeUniform plyer;  
+removeVest plyer;  
+removeBackpack plyer;  
+removeHeadgear plyer;  
+removeGoggles plyer; 
 
 //common items
 //------------------------------------------------
 
-_uniform = "UK3CB_BAF_U_HeliPilotCoveralls_Army";
-_pistolMag = "UK3CB_BAF_9_17Rnd";
-_rifleMag = "rhs_mag_30Rnd_556x45_M855A1_PMAG";
-_rifle = "UK3CB_BAF_L22A2";
-_rifleOptic = "rksl_optic_lds";
-_rifleLLM = "UK3CB_BAF_LLM_IR_Black";
-_pistol = "UK3CB_BAF_L131A1";
-_vest = "mpx_virtus_p";
-_helmet = "UK3CB_H_Crew_Helmet";
-_backpack = "B_Parachute";
-_binoculars = "ACE_VectorDay";
+pilotUniform = "ML700_Cadian_Pilot_Uniform";
+rifleLLM = "TIOW_M36_flashlight";
+rifle = "M36KantRifle700";
+rifleMag = "M36KantRifle_mag";
+pilotVest = "ML700_Cadian_Pilot_Armor";
+helmet = "ML700_Cadian_Pilot_Helmet";
+pilotGoggles = "ML700_Cadian_Pilot_Goggles";
 
 //------------------------------------------------
 
 //function for adding bandages to players uniform
-addBandage = {
-	for "_i" from 1 to 10 do { _plyer addItemToUniform "ACE_fieldDressing"};
-	for "_i" from 1 to 10 do { _plyer addItemToUniform "ACE_elasticBandage"};
-	for "_i" from 1 to 10 do { _plyer addItemToUniform "ACE_packingBandage"};
-	for "_i" from 1 to 10 do { _plyer addItemToUniform "ACE_quikclot"};
+addUniformItems = {
+	for "_i" from 1 to 10 do { plyer addItemToUniform "ACE_fieldDressing" };
+	for "_i" from 1 to 10 do { plyer addItemToUniform "ACE_elasticBandage" };
+	for "_i" from 1 to 10 do { plyer addItemToUniform "ACE_packingBandage" };
+	for "_i" from 1 to 10 do { plyer addItemToUniform "ACE_quikclot" };
+	for "_i" from 1 to 4 do { plyer addItemToUniform "ACE_splint" };
+	for "_i" from 1 to 4 do { plyer addItemToUniform "ACE_tourniquet" };
+	for "_i" from 1 to 3 do { plyer addItemToUniform "ACE_plasmaIV_500" };
+	for "_i" from 1 to 2 do { plyer addItemToUniform "kat_Painkiller" };
+	plyer addItemToUniform "ACE_EarPlugs";
+	plyer addItemToUniform "IC_CAD_KRAK_mag";
 };
 
 //fucntion for adding common ammo and misc items to the vest
 addVestItems = {
-	_plyer addItemToVest "ACE_EarPlugs";
-	_plyer addItemToVest "ItemcTabHCam";
-	_plyer addItemToVest "ACE_EntrenchingTool";
-	for "_i" from 1 to 3 do {_plyer addItemToVest _pistolMag;};
-	for "_i" from 1 to 5 do {_plyer addItemToVest _rifleMag;};
+	for "_i" from 1 to 2 do { plyer addItemToVest "IC_CAD_FRAG_mag" };
+	for "_i" from 1 to 4 do { plyer addItemToVest rifleMag };
+	plyer addItemToVest "ItemcTabHCam";
+	plyer addItemToVest "ACE_EntrenchingTool";
+	plyer addItemToVest "ACRE_PRC343";
+	plyer addItemToVest "IC_CAD_SMOKE_mag";
 };
 
 
@@ -51,56 +54,22 @@ switch (_LO) do
 	case "PIL":
 	{
 		//weapons
-		_plyer addWeapon _rifle;
-		_plyer addPrimaryWeaponItem _rifleLLM;
-		_plyer addPrimaryWeaponItem _rifleOptic;
-		_plyer addPrimaryWeaponItem _rifleMag;
-		_plyer addWeapon _pistol;
-		_plyer addWeaponItem [_pistol, _pistolMag];
+		plyer addWeapon rifle;
+		plyer addPrimaryWeaponItem rifleLLM;
+		plyer addPrimaryWeaponItem rifleMag;
 				
 		//uniform
-		_plyer forceAddUniform _uniform;
-		
+		plyer forceAddUniform pilotUniform;
+		plyer addVest pilotVest;
+
 		//uniform gear
-		call addBandage;
-		
-		//vest
-		_plyer addVest _vest;
-		
+		call addUniformItems;
 		//vest gear
 		call addVestItems;
 		
 		//Other Equipment
-		_plyer addBackpack _backpack;
-		_plyer addHeadgear _helmet;
-		_plyer addWeapon _binoculars;
-	};
-	
-	case "COPIL":
-	{
-		//weapons
-		_plyer addWeapon _rifle;
-		_plyer addPrimaryWeaponItem _rifleLLM;
-		_plyer addPrimaryWeaponItem _rifleOptic;
-		_plyer addPrimaryWeaponItem _rifleMag;
-		_plyer addWeapon _pistol;
-		_plyer addWeaponItem [_pistol, _pistolMag];
-	
-		//uniform
-		_plyer forceAddUniform _uniform;
-		
-		//uniform gear
-		call addBandage;
-		
-		//vest
-		_plyer addVest _vest;
-		
-		//vest gear
-		call addVestItems;
-		
-		//Other Equipment
-		_plyer addBackpack _backpack;
-		_plyer addHeadgear _helmet;
-		_plyer addWeapon _binoculars;
+		plyer addHeadgear helmet;
+		plyer addItem pilotGoggles;
+		plyer assignItem pilotGoggles;
 	};
 };

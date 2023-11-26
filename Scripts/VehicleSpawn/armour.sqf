@@ -1,13 +1,8 @@
 _LO = ((_this select 3) select 0) select 0;
 
 // classnames
-// _challenger2 = "CUP_B_Challenger2_2CW_BAF";
-_warrior = "UK3CB_BAF_Warrior_A3_W_Cage_Camo_MTP";
-_warriorT = "UK3CB_BAF_Warrior_A3_D_Cage_Camo_MTP";
-_bulldogGPMG = "UK3CB_BAF_FV432_Mk3_GPMG_Green_MTP";
-_bulldogHMG = "UK3CB_BAF_FV432_Mk3_RWS_Green_MTP";
-_bulldogGPMGT = "UK3CB_BAF_FV432_Mk3_GPMG_Sand_MTP";
-_bulldogHMGT = "UK3CB_BAF_FV432_Mk3_RWS_Sand_MTP";
+chimera = "TIOW_CadianChimAuto_700";
+lemanRuss = "TIOW_Cad_LR_Battlecannon_700th_Blu";
 
 spawnARMOUR = {
 	params ["_location", "_armour"];
@@ -22,36 +17,14 @@ spawnARMOUR = {
 	};
 };
 
-
-
 switch (_LO) do {
-	case "WARRIOR":
+	case "CHIM":
 	{
-		[ArmourSpawn, _warrior] call spawnARMOUR;
+		[ArmourSpawn, chimera] call spawnARMOUR;
 	};
 
-	case "WARRIORTAN":
+	case "RUSS":
 	{
-		[ArmourSpawn, _warriorT] call spawnARMOUR;
-	};
-
-	case "BULLDOGGPMG":
-	{
-		[ArmourSpawn, _bulldogGPMG]	call spawnARMOUR;	
-	};
-
-	case "BULLDOGHMG":
-	{
-		[ArmourSpawn, _bulldogHMG] call spawnARMOUR;
-	};
-
-	case "BULLDOGGPMGTAN":
-	{
-		[ArmourSpawn, _bulldogGPMGT]	call spawnARMOUR;	
-	};
-
-	case "BULLDOGHMGTAN":
-	{
-		[ArmourSpawn, _bulldogHMGT] call spawnARMOUR;
+		[ArmourSpawn, lemanRuss] call spawnARMOUR;
 	};
 };

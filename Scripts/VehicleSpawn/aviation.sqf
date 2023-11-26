@@ -1,13 +1,9 @@
 _LO = ((_this select 3) select 0) select 0;
 
 // classnames
-_wildcatArmed = "UK3CB_BAF_Wildcat_AH1_6_Generic_MTP";
-_wildcatArmedg = "CUP_B_AW159_GB";
-_chinook = "UK3CB_BAF_Chinook_HC2_MTP";
-_merlin = "UK3CB_BAF_Merlin_HC3_18_GPMG_MTP";
-_pumaHC1 = "CUP_B_SA330_Puma_HC1_BAF";
-_pumaHC2 = "CUP_B_SA330_Puma_HC2_BAF";
-// _MQ9 = "UK3CB_BAF_MQ9_Reaper_Generic_MTP";
+arvusLighter = "ArvusLighter";
+valkTransport = "ML700_Valkyrie_Transport";
+valkPylons = "ML700_Valkyrie_Multilas";
 
 spawnAIR = {
 	params ["_location", "_aircraft"];
@@ -25,33 +21,18 @@ spawnAIR = {
 
 switch (_LO) do 
 {
-	case "WCARMED":
+	case "AVL":
 	{
-		[HeliPad, _wildcatArmed] call spawnAIR;
+		[HeliPad, arvusLighter] call spawnAIR;
 	};
 
-	case "WCARMEDG":
+	case "VTRAN":
 	{
-		[HeliPad, _wildcatArmedg] call spawnAIR;
+		[HeliPad, valkTransport] call spawnAIR;
 	};
 
-	case "CHINOOK":
+	case "VPYLON":
 	{
-		[HeliPad, _chinook] call spawnAIR;
-	};
-
-	case "MERLIN":
-	{
-		[HeliPad, _merlin] call spawnAIR;
-	};
-
-	case "PUMA":
-	{
-		[HeliPad, _pumaHC1] call spawnAIR;
-	};
-
-	case "PUMAC":
-	{
-		[HeliPad, _pumaHC2] call spawnAIR;
+		[HeliPad, valkPylons] call spawnAIR;
 	};
 };
