@@ -63,7 +63,7 @@ switch (_LO) do
 		plyer addVest pilotVest;
 
 		//uniform gear
-		call addBasics;
+		[rifle, pilotVest] call addBasics;
 		//vest gear
 		call addVestItems;
 		

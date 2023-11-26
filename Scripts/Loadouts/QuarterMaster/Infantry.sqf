@@ -115,6 +115,15 @@ addMedicBackpackItems = {
 	for "_i" from 1 to 5 do { plyer addItemToBackpack "kat_naloxone"};
 };
 
+emptySpecBP = {
+	for "_i" from 1 to 6 do { plyer removeItemFromBackpack rifleMag };
+	for "_i" from 1 to 4 do { plyer addItemToBackpack "TIOW_ig_frag_grenade_mag"};
+	for "_i" from 1 to 2 do { plyer addItemToBackpack "ACE_morphine"};
+	for "_i" from 1 to 2 do { plyer addItemToUniform "ACE_fieldDressing" };
+	for "_i" from 1 to 2 do { plyer addItemToUniform "ACE_packingBandage" };
+	for "_i" from 1 to 2 do { plyer addItemToUniform "ACE_tourniquet" };
+};
+
 // calling switch for actioning kits
 switch (_LO) do
 {
@@ -163,6 +172,7 @@ switch (_LO) do
 	case "SPEC":
 	{
 		plyer addBackpack backpackSpec;
+		call emptySpecBP;
 		[specialWeapon, cadVest] call addBasics;
 		call addUniformItems;
 		call addVestItems;
