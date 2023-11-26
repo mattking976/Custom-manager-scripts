@@ -16,7 +16,7 @@ removeGoggles plyer;
 pilotUniform = "ML700_Cadian_Pilot_Uniform";
 rifleLLM = "TIOW_M36_flashlight";
 rifle = "M36KantRifle700";
-rifleMag = "UK3CB_BAF_556_30Rnd";
+rifleMag = "M36KantRifle_mag";
 pilotVest = "ML700_Cadian_Pilot_Armor";
 helmet = "ML700_Cadian_Pilot_Helmet";
 pilotGoggles = "ML700_Cadian_Pilot_Goggles";
