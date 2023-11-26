@@ -3,7 +3,7 @@ WM addAction ["<t color='#ff1111'>Quartermaster</t>", hint ""];
 WM addAction ["==================", hint ""];
 WM addAction ["Squad Leader","Scripts\Loadouts\Quartermaster\Infantry.sqf",[["SL"]]];
 WM addAction ["Vox Caster","Scripts\Loadouts\Quartermaster\Infantry.sqf",[["VOX"]]];
-WM addAction ["Squad Medic", "Scripts\Loadouts\Quartermaster\Infantry.sqf", [["MED"]]];
+WM addAction ["Squad Medic", "Scripts\Loadouts\Quartermaster\Infantry.sqf", [["MEDIC"]]];
 WM addAction ["Specialist", "Scripts\Loadouts\Quartermaster\Infantry.sqf", [["SPEC"]]];
 WM addAction ["Squad Rifleman", "Scripts\Loadouts\Quartermaster\Infantry.sqf", [["RFL"]]];
 WM addAction ["==================", hint ""]; 

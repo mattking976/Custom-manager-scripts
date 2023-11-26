@@ -28,7 +28,7 @@ rifle = "M36KantRifle700";
 specialWeapon = "ICP_LMG_01_imp"; // stubber but options available from arsenal
 
 // magazines
-rifleMag = "UK3CB_BAF_556_30Rnd";
+rifleMag = "M36KantRifle_mag";
 specialWeaponMag = "ic_100rnd_825_Tracer_rifleMag";
 
 // backpacks including LR Radios
@@ -125,6 +125,7 @@ switch (_LO) do
 		call addVestItems;
 		plyer addWeapon cTab;
 		plyer addHeadgear helmet;
+		plyer addWeapon binoculars;
 	};
 
 	case "VOX":
@@ -135,6 +136,8 @@ switch (_LO) do
 		call addUniformItems;
 		call addVestItems;
 		plyer addHeadgear voxHelmet;
+		plyer addWeapon gps;
+		plyer addWeapon binoculars;
 	};
 
 	case "RFL":
@@ -143,6 +146,7 @@ switch (_LO) do
 		call addUniformItems;
 		call addVestItems;
 		plyer addHeadgear helmet;
+		plyer addWeapon gps;
 	};
 
 	case "MEDIC":
@@ -153,6 +157,7 @@ switch (_LO) do
 		call addUniformItems;
 		call addVestItems;
 		plyer addHeadgear helmet;
+		plyer addWeapon gps;
 	};
 
 	case "SPEC":
@@ -162,6 +167,7 @@ switch (_LO) do
 		call addUniformItems;
 		call addVestItems;
 		plyer addHeadgear helmet;
+		plyer addWeapon gps;
 	};
 
 	case "ZEUS":
