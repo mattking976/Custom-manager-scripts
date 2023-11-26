@@ -117,11 +117,11 @@ addMedicBackpackItems = {
 
 emptySpecBP = {
 	for "_i" from 1 to 6 do { plyer removeItemFromBackpack rifleMag };
-	for "_i" from 1 to 4 do { plyer addItemToBackpack "TIOW_ig_frag_grenade_mag"};
-	for "_i" from 1 to 2 do { plyer addItemToBackpack "ACE_morphine"};
-	for "_i" from 1 to 2 do { plyer addItemToUniform "ACE_fieldDressing" };
-	for "_i" from 1 to 2 do { plyer addItemToUniform "ACE_packingBandage" };
-	for "_i" from 1 to 2 do { plyer addItemToUniform "ACE_tourniquet" };
+	for "_i" from 1 to 4 do { plyer removeItemFromBackpack "TIOW_ig_frag_grenade_mag"};
+	for "_i" from 1 to 2 do { plyer removeItemFromBackpack "ACE_morphine"};
+	for "_i" from 1 to 2 do { plyer removeItemFromBackpack "ACE_fieldDressing" };
+	for "_i" from 1 to 2 do { plyer removeItemFromBackpack "ACE_packingBandage" };
+	for "_i" from 1 to 2 do { plyer removeItemFromBackpack "ACE_tourniquet" };
 };
 
 // calling switch for actioning kits
