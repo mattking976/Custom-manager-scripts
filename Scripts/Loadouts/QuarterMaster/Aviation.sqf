@@ -69,6 +69,7 @@ switch (_LO) do
 		
 		//Other Equipment
 		plyer addHeadgear helmet;
-		plyer addGoggles pilotGoggles;
+		plyer addItem pilotGoggles;
+		plyer assignItem pilotGoggles;
 	};
 };
