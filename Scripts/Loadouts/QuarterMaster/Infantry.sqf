@@ -34,7 +34,7 @@ specialWeaponMag = "ic_100rnd_825_Tracer_rifleMag";
 // backpacks including LR Radios
 backpackVox = "IG_Voxcaster_Black";
 backpackMedic = "TIOW_CadMedicaeBackpack";
-backpackSpec = "TIOW_CadBackpack";
+backpackSpec = "IC_CAD_assaultpack_02_grey";
 longRangeRadio = "ACRE_PRC117F";
 
 // binoculars
@@ -115,15 +115,6 @@ addMedicBackpackItems = {
 	for "_i" from 1 to 5 do { plyer addItemToBackpack "kat_naloxone"};
 };
 
-emptySpecBP = {
-	for "_i" from 1 to 6 do { plyer removeItemFromBackpack rifleMag };
-	for "_i" from 1 to 4 do { plyer removeItemFromBackpack "TIOW_ig_frag_grenade_mag"};
-	for "_i" from 1 to 4 do { plyer removeItemFromBackpack "ACE_morphine"};
-	for "_i" from 1 to 4 do { plyer removeItemFromBackpack "ACE_fieldDressing" };
-	for "_i" from 1 to 4 do { plyer removeItemFromBackpack "ACE_packingBandage" };
-	for "_i" from 1 to 4 do { plyer removeItemFromBackpack "ACE_tourniquet" };
-};
-
 // calling switch for actioning kits
 switch (_LO) do
 {
@@ -172,7 +163,6 @@ switch (_LO) do
 	case "SPEC":
 	{
 		plyer addBackpack backpackSpec;
-		call emptySpecBP;
 		[specialWeapon, cadVest] call addBasics;
 		call addUniformItems;
 		call addVestItems;
